@@ -1,10 +1,11 @@
 require "capybara"
-require "capybara/driver/webkit/node"
-require "capybara/driver/webkit/browser"
-require "capybara/driver/webkit/socket_debugger"
-require "capybara/driver/webkit/cookie_jar"
 
 class Capybara::Driver::Webkit
+  autoload :Node, "capybara/driver/webkit/node"
+  autoload :Browser, "capybara/driver/webkit/browser"
+  autoload :SocketDebugger, "capybara/driver/webkit/socket_debugger"
+  autoload :CookieJar, "capybara/driver/webkit/cookie_jar"
+
   class WebkitInvalidResponseError < StandardError
   end
 
